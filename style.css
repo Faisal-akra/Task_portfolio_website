@@ -79,3 +79,67 @@ p{
 .brand h1 span{
     color: crimson;
 }
+
+/* Start Header */
+
+#header{
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    width: 100vw;
+    height: auto;
+}
+
+#header .header{
+    min-height: 8vh;
+    background-color: rgb(31, 30, 30, 0.24);
+    transition: 0.3s ease background-color;
+}
+
+#header .nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding: 0 10px;
+}
+
+
+#header .hamburger{
+    border: 3px solid white;
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    cursor: pointer;
+    transform: scale(0.8);
+}
+
+#header .hamburger:after{
+    content: "";
+    border: 3px solid white;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    animation: hamburger-puls 1s ease infinite;
+}
+
+@keyframes hamburger-puls {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.4);
+    }
+}
