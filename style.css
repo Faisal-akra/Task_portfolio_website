@@ -143,3 +143,42 @@ p{
         transform: scale(1.4);
     }
 }
+
+
+#header .hamburger .bar{
+    background-color: white;
+    height: 2px;
+    width: 30px;
+    position: relative;
+    z-index: -1;
+}
+
+#header .hamburger .bar::before, #header .hamburger .bar::after{
+    content: "";
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    transition: 0.3s ease top, bottom;
+
+}
+
+#header .hamburger .bar::after {
+    top: 8px;
+}
+
+
+
+#header .hamburger .bar::before {
+    bottom: 8px;
+}
+
+#header .hamburger.active .bar::before{
+    bottom: 0;
+}
+
+#header .hamburger.active .bar::after{
+    top: 0;
+}
+
